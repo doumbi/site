@@ -29,17 +29,31 @@
     {% endfor %}
     {% if (pageNumber+sumPages) > 1 %}
       <nav id="nav-below" class="site-navigation paging-navigation">
-        {% if pageNumber !== 0 %}
-          <div class="nav-previous">
-            <a href="/page/{{pageNumber-1}}">&gt;-</a>
-          </div>
-        {% endif %}
-        page {{pageNumber+1}} of {{sumPages}}
-        {% if (pageNumber+1) !== sumPages %}
-          <div class="nav-next">
-            <a href="/page/{{pageNumber+1}}">-&lt;</a>
-          </div>
-        {% endif %}
+        <div class="nav nav-previous">
+          {% if pageNumber %}
+            <a href="/page/0">&lt;&lt;</a>
+          {% else %}
+            <span>&lt;&lt;</span>
+          {% endif %}
+          {% if pageNumber !== 0 %}
+            <a href="/page/{{pageNumber-1}}">&lt;</a>
+          {% else %}
+            <span>&lt;</span>
+          {% endif %}
+        </div>
+        page {{pageNumber+1}} / {{sumPages}}
+        <div class="nav nav-next">
+          {% if (pageNumber+1) < sumPages %}
+            <a href="/page/{{pageNumber+1}}">&gt;</a>
+          {% else %}
+            <span>&gt;</span>
+          {% endif %}
+          {% if (pageNumber+1) !== sumPages %}
+            <a href="/page/{{sumPages-1}}">&gt;&gt;</a>
+          {% else %}
+            <span>&gt;&gt;</span>
+          {% endif %}
+        </div>
       </nav>
     {% endif %}
   </main>
