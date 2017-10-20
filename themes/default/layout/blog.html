@@ -1,0 +1,61 @@
+{% extends "./layout.html" %}
+
+{% block title %}
+  {{config.basic.title}}
+{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block nav %}
+  {% parent %}
+{% endblock %}
+
+{% block content %}
+  <main id="content" class="site-content">
+    {% for post in posts %}
+      <article>
+        <header class="article-header">
+          <h1 class="entry-title"><a href={{post.url}}>{{post.title}}</a></h1>
+        </header>
+        <div class="entry-content preview">
+          {{post.headContent}}
+          <div class="read-more" onclick="this.parentElement.classList.remove('preview')">read more</div>
+        </div>
+        <footer class="article-footer">
+          <a href="/categories/{{post.categories}}">#{{post.categories}}</a> | {{post.date}}
+        </footer>
+      </article>
+    {% endfor %}
+    {% if (pageNumber+sumPages) > 1 %}
+      <nav id="nav-below" class="site-navigation paging-navigation">
+        {% if pageNumber !== 0 %}
+          <div class="nav-previous">
+            <a href="/page/{{pageNumber-1}}">&gt;-</a>
+          </div>
+        {% endif %}
+        page {{pageNumber+1}} of {{sumPages}}
+        {% if (pageNumber+1) !== sumPages %}
+          <div class="nav-next">
+            <a href="/page/{{pageNumber+1}}">-&lt;</a>
+          </div>
+        {% endif %}
+      </nav>
+    {% endif %}
+  </main>
+{% endblock %}
+
+{% block secondary %}
+  {% parent %}
+{% endblock %}
+
+<!--
+  <div class="tag-cloud">
+    <div class="tag-title">Tags</div>
+    <div class="tags">
+      {% for tag in datas %}
+        <a href="{{tag.url}}">{{tag.name}}</a>
+      {% endfor %}
+    </div>
+  </div>
+-->

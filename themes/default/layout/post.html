@@ -1,0 +1,61 @@
+{% extends "./layout.html" %}
+
+{% block title %}
+  {{config.basic.title}}
+{% endblock %}
+
+{% block head %}
+  <meta property="fb:profile_id" content="134681427156380">
+  <meta property="og:description" content="École de programmation informatique gratuite, atypique et open-source">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Not a Number">
+  <meta property="og:image" content="https://nan.ci/assets/images/jumbo.png">
+  <meta property="og:url" content="https://nan.ci/{{post.url}}">
+  <meta property='og:type' content='article' />
+  <meta property='article:published_time' content='{{post.date}}' />
+  <meta property='article:section' content='{{post.categories}}' />
+  <meta property='article:author' content='https://www.facebook.com/ecolenan' />
+  <meta property='article:publisher' content='https://www.facebook.com/ecolenan' />
+  <meta property='og:site_name' content='Not a Number' />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{config.theme.highlightTheme}}.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+{% endblock %}
+
+{% block nav %}
+{% endblock %}
+
+{% block content %}
+  <div class="post">
+    <article>
+      <header class="article-header">
+        <h1 class="entry-title"><a href={{post.url}}>{{post.title}}</a></h1>
+      </header>
+      <div class="entry-content">
+        {{post.content}}
+      </div>
+      <footer class="article-footer">
+        <a href="/categories/{{post.categories}}">#{{post.categories}}</a> | {{post.date}}
+      </footer>
+    </article>
+  </div>
+{% endblock %}
+
+{% block secondary %}
+{% endblock %}
+
+{% block script %}
+  <link rel="stylesheet" href="/assets/css/gitment.css">
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <script>
+  hljs.initHighlightingOnLoad()
+  var gitment = new Gitment({
+    owner: "{{config.gitment.owner}}",
+    repo: "{{config.gitment.repo}}",
+    oauth: {
+      client_id: "{{config.gitment.oauth.client_id}}",
+      client_secret: "{{config.gitment.oauth.client_secret}}"
+    }
+  })
+  gitment.render('gitcomment')
+  </script>
+{% endblock %}

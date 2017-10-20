@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link id="favicon" rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA1ElEQVR4AWJwL/ABlF8HGAwDQRiFQWAB9G57nblQc5eeqM1iqVamnXyhaPiBse+JbGbmcLYnRugMhN9HRMLhKIFwl0C4SyDcJRR+GxEJhV9GRILgs04kGK4SCHcJhLuEvvZlRCQUvm65igTBZ51IMFwlpgDBQSJmQdThLBFvH2EVDhKxdw1bET5Aa1GiJT+iMnz5piZlCLxWWxfo2YFF4e7tOIF/kAgfSHJ4JhFnjWQ9uVZ717bTSFZou2mbBoFCzweJI/D2An+WaL9fzf5iOT1zPX8AUeOdYxlrDIoAAAAASUVORK5CYII=">
+  {% block head %}
+
+  {% endblock %}
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+  <div id="page" class="hfeed site">
+    <header id="masthead" class="site-header">
+      <div class="site-header-info">
+        <a href="/" class="site-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+            <defs>
+              <radialGradient id="g" fy="0">
+                <stop stop-color="#F7AEF8"/>
+                <stop offset="100%" stop-color="#777FFF"/>
+              </radialGradient>
+            </defs>
+            <path fill="url(#g)" d="M25 0L0 25l5 5 20-20 20 20 5-5M25 40l-5 5 5 5 5-5M25 20L10 35l5 5 10-10 10 10 5-5"/>
+          </svg>
+          <h1 class="site-title">{{config.basic.title}}</h1>
+        </a>
+        <h2 class="site-description">{{config.basic.description}}</h2>
+      </div>
+      {% block nav %}
+        <nav class="site-navigation main-navigation">
+          <div class="menu">
+            <ul>
+              {% for page in config.theme.navPages %}
+                <li><a href="/{{page.url}}">{{page.title}}</a></li>
+              {% endfor %}
+              <li><a href="https://www.facebook.com/ecolenan">Facebook</a></li>
+              <li><a href="https://github.com/nan-ci">Github</a></li>
+            </ul>
+          </div>
+        </nav>
+      {% endblock %}
+    </header>
+
+    <div id="secondary" class="widget-area">
+      <aside class="widget widget_categories">
+        <ul>
+          <li><a href="/blog">#new</a></li>
+          {% for cate in categories %}
+            {% if config.theme.filter.indexOf(cate.name)===-1 %}
+              <li><a href={{cate.url}}>#{{cate.name}}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </aside>
+    </div>
+
+    <div id="main" class="site-main">
+      <div id="primary">
+        {% block content %}
+        {% endblock %}
+      </div>
+
+      {% block secondary %}
+      {% endblock %}
+    </div>
+
+    <footer id="colophon" class="site-footer">
+      <!--
+      © 2017 <a href="#">{{config.basic.author}}</a>
+      主题提供: <a href="https://github.com/laoqiren/yohe">Yohe</a>
+      Powered By <a href="https://github.com/laoqiren/yohe">Yohe</a>
+      图片存储: <a href="http://www.qiniu.com/">qiniu</a>
+      -->
+    </footer>
+  </div>
+
+  {% block script %}
+  {% endblock %}
+</body>
+</html>
