@@ -12,7 +12,7 @@ NaN vient de “Not a Number”, c’est une valeur indéfinie en informatique.
 > connue.
 > [https://fr.wikipedia.org/wiki/NaN](https://en.wikipedia.org/wiki/NaN)
 
-Pour la petite histoire, l’idée de ce nom est arrivée quand Xavier prenait
+Pour la petite histoire, l’idée de ce nom est venue quand Xavier prenait
 l’avion pour Abidjan. Il a reçu ce SMS pour l’alerter de son retard
 
 ![](https://cdn-images-1.medium.com/max/1600/1*-nboakuToKBSXtzCzXo-1g.png)
