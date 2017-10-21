@@ -13,7 +13,7 @@ Quant à nous, on a plein d’idées pour **améliorer l’enseignement**, et l�
 
 On a donc associé nos moyens, nos compétences et nos objectifs, pour monter ensemble une **école de programmation**.
 
-![](https://cdn-images-1.medium.com/max/1600/1*F-3iHaaX1pe5j5vWRpwFEQ.jpeg)
+![](mac-blister)
 
 ## On a rêvé d’une école Open Source
 

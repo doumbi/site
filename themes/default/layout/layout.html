@@ -78,6 +78,23 @@
   </div>
 
   {% block script %}
+<script type="text/javascript">
+// handle images names
+var imgExt = (function (elem) {
+  var imgExtParts = []
+  window.devicePixelRatio > 1 && imgExtParts.push('-x2')
+    imgExtParts.push((elem.getContext
+      && elem.getContext('2d')
+      && elem.toDataURL('image/webp').indexOf('data:image/webp') === 0)
+        ? '.webp' : '.jpg')
+  return imgExtParts.join('')
+})(document.createElement('canvas'))
+Array.prototype.slice.call(document.getElementsByClassName('img'), 0)
+  .forEach(function (el) {
+    el.style.backgroundSize = 'cover'
+    el.style.backgroundImage = 'url("/assets/images/'+ el.dataset.src + imgExt +'")'
+  })
+</script>
   {% endblock %}
 </body>
 </html>

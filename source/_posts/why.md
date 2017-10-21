@@ -15,12 +15,12 @@ NaN vient de “Not a Number”, c’est une valeur indéfinie en informatique.
 Pour la petite histoire, l’idée de ce nom est arrivée quand Xavier prenait
 l’avion pour Abidjan. Il a reçu ce SMS pour l’alerter de son retard
 
-![](https://cdn-images-1.medium.com/max/1600/1*-nboakuToKBSXtzCzXo-1g.png)
+![](sms)
 
 **NaN** est apparu, comme souvent, à l’insu des programmeurs, comme un morceau
 de code qui survient là où on ne l’attend pas, comme dans notre cas à Abidjan.
 
-![](https://cdn-images-1.medium.com/max/1600/1*dz9W1qB-eAFPT2WBBUvg1Q.png)
+![](console)
 
 NaN, c’est le retour d’une opération impossible, indéfinie qui symbolise que
 nous cherchon a definir ce que l’éducation doit devenir mais sans avoir de
@@ -34,7 +34,7 @@ et [101](https://www.le-101.fr/) *(tiré de la “*[Room 101](http://matrix.wiki
 
 Nous on fait reference à la série **“**[Le Prisonnier](https://en.wikipedia.org/wiki/The_Prisoner)**” :**
 
-![](https://cdn-images-1.medium.com/max/1600/1*neUr7kDFGQ4Di8Nl5kM5YA.png)
+![](the-prisonner)
 
 Pas des numéros, mais des étudiants libres et singulier qui seront rapidement
 mis face à la fameuse valeur
