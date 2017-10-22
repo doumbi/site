@@ -25,7 +25,7 @@ de code qui survient là où on ne l’attend pas, comme dans notre cas, à Abid
 NaN, c’est le retour d’une opération impossible, indéfinie qui symbolise que
 nous cherchons à définir ce que l’éducation doit devenir mais sans avoir de
 réponse finale sur le sujet.<br> On pense justement que cette recherche est sans
-fin et on invite les étudiants à nous rejoindre dans ce mouvement et de nous aider
+fin et on invite les étudiants à nous rejoindre dans ce mouvement et à nous aider
 de par leur créativité et leur énergie neuve.
 
 C’est aussi un clin d’œil à [42](http://www.42.fr)
