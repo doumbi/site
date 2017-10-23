@@ -45,5 +45,5 @@ Insistant sur le côté humain, on met en valeur l’individu, que l'on considè
 une richesse du système. C’est là encore une des particularités de NaN, qui n’a
 pas d’égal, ni même lui-même..
 ```javascript
-NaN === NaN -> false
+NaN === NaN // -> false
 ```

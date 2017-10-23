@@ -128,6 +128,8 @@ label[for="email"] {
 }
 #logo {
   margin-top: 1em;
+  width: 10em;
+  text-align: center;
 }
 
 #description {
@@ -410,9 +412,11 @@ input[type="submit"].wait, input[type="submit"]:active, button:active {
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108473312-1"></script>
   <script>
-    window.dataLayer || (window.dataLayer = [])
-    function gtag(){dataLayer.push(arguments)}
-    gtag('js',new Date(),'config','UA-108473312-1')
+  window.dataLayer || (window.dataLayer = [])
+  function gtag(){dataLayer.push(arguments)}
+  gtag('js',new Date())
+  gtag('config','UA-108473312-1')
   </script>
+  <link rel="preload" href="/assets/misc/brand-rambo.gif" as="image">
 </body>
 </html>
