@@ -1,21 +1,15 @@
 {
-  "name": "yohe",
-  "version": "1.5.6",
-  "description": "static blog generator system",
+  "name": "site",
+  "author": "NaN",
+  "license": "MIT",
+  "version": "1.0.0",
+  "description": "NaN homepage (with blog generator)",
   "main": "index.js",
   "scripts": {
-    "start": "./yohe build && ./yohe server",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "blog",
-    "static",
-    "website"
-  ],
-  "author": "laoqiren",
-  "license": "MIT",
-  "bin": {
-    "yohe": "./bin/yohe"
+    "start": "npm run build && npm run serve",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./yohe build",
+    "serve": "./yohe server"
   },
   "dependencies": {
     "commander": "^2.11.0",
